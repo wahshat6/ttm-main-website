@@ -1,0 +1,1123 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Totempole Inc - Shelter Services & Resource Finder</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+    <!-- Place favicon.ico in the root directory -->
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon/favicon.png"> -->
+
+    <!-- CSS here -->
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/font-awesome-pro.css">
+    <link rel="stylesheet" href="assets/css/spacing.css">
+    <link rel="stylesheet" href="assets/css/atropos.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+  
+    <!-- CSS here -->
+    <!-- CSS here -->
+    <style>
+        .download-section {
+            text-align: center;
+            padding: 50px 20px;
+            color: #333;
+        }
+
+        .download-section h2 {
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+
+        .download-section .subtitle {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .download-section img {
+            max-width: 300px;
+            height: auto;
+            margin: 30px auto;
+            display: block;
+        }
+
+        .store-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .store-button img {
+            height: 60px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .store-button:hover img {
+            transform: scale(1.05);
+        }
+
+        .tagline {
+            font-size: 18px;
+            color: #444;
+            font-weight: 500;
+        }
+
+        /* Enhanced Button Styles from index.html */
+        .btn-store {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 1.75rem;
+            font-size: 1rem;
+            white-space: nowrap;
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(20px);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-glow::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .btn-glow:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn-store:hover,
+        .btn-glow:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(100, 92, 255, 0.4);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* =====================================================
+           RESPONSIVE FIX — fits 100% in any browser resolution
+           ===================================================== */
+
+        /* 1. Root overflow guard */
+        html,
+        body {
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        /* 2. Fluid custom containers — no fixed max-width, fills 100% at any zoom */
+        .container,
+        .container-fluid,
+        .container-1430,
+        .container-1230,
+        [class*="container-"] {
+            width: 100% !important;
+            max-width: 100% !important;
+            padding-left: clamp(1.5rem, 5vw, 4rem) !important;
+            padding-right: clamp(1.5rem, 5vw, 4rem) !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+
+        /* NAVBAR: zero side padding — touches both edges */
+        .tp-header-10-area .container,
+        .tp-header-10-area .container-1430,
+        .tp-header-10-area [class*="container-"] {
+            padding-left: 24px !important;
+            padding-right: 24px !important;
+        }
+
+        /* 3. All images fluid */
+        img,
+        svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* 4. Every section, wrapper and row stretches edge-to-edge */
+        body > *,
+        header, main, footer,
+        .app-hero-area,
+        .app-stack-area,
+        .app-stack-contain,
+        .app-stack-item,
+        .app-stack-warpper,
+        .app-feature-area,
+        .app-cta-area,
+        .app-footer-area,
+        .tp-copyright-app-area,
+        .tp-header-10-main,
+        .tp-header-10-area,
+        #smooth-wrapper,
+        #smooth-content,
+        .row {
+            width: 100% !important;
+            max-width: 100% !important;
+            box-sizing: border-box !important;
+        }
+        /* Rows must not add negative margins that cause side gaps */
+        .row {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+
+        /* 5. Hero bottom hand image — keep inside viewport */
+        .app-hero-bottom-thumb-main {
+            /* width: 100%; */
+            overflow: hidden;
+        }
+
+        .app-hero-bottom-thumb-main img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ── HERO MOCKUP SIZING ── */
+
+        /* Hero section: must be position:relative so absolute child anchors to it */
+        .app-hero-area {
+            position: relative !important;
+            min-height: 88vh !important;
+            overflow: hidden !important;
+        }
+
+        /* Hero row: full height, left text in normal flow */
+        .app-hero-area .row.align-items-center {
+            min-height: 88vh;
+            align-items: center !important;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* LEFT column: text, sits in normal grid flow, z-index above mockup */
+        .app-hero-area .col-lg-6:first-child,
+        .app-hero-area .col-md-8,
+        .app-hero-area .col-12 {
+            position: relative;
+            z-index: 5;
+        }
+
+        /* Left wrap */
+        .app-hero-wrap {
+            padding-top: 80px !important;
+            padding-left: 0 !important;
+        }
+
+        /* MOCKUP: absolutely pinned to right side */
+        .hero-mockup-col {
+            position: absolute !important;
+            top: 0 !important;
+            right: 0 !important;          /* flush to right — no clipping */
+            width: 58% !important;        /* right 58% — left 42% stays clear for text */
+            height: 100% !important;
+            z-index: 1 !important;        /* below text (z-index:5) */
+            overflow: hidden !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: flex-end !important;
+            pointer-events: none;
+            padding-right: 20px !important; /* breathing room on the right edge */
+        }
+
+        /* Mockup image: fill the column, object-position keeps phones right-aligned */
+        .hero-mockup-col img {
+            width: 100% !important;
+            height: 100% !important;
+            max-width: none !important;
+            object-fit: contain !important;
+            object-position: right center !important;
+            display: block;
+            transform: none !important;   /* no manual offset needed */
+            filter: drop-shadow(-15px 20px 40px rgba(0,0,0,0.12));
+        }
+
+        /* Heading */
+        .app-hero-heading h4.tp-section-title-phudu {
+            font-size: clamp(2rem, 4.5vw, 3.8rem) !important;
+            line-height: 1.1 !important;
+            font-weight: 800 !important;
+        }
+
+        /* ── TABLET: ≤ 1024px ── */
+        @media (max-width: 1024px) {
+            /* Reduce oversized stack padding */
+            .app-stack-item.pt-200 {
+                padding-top: 80px !important;
+            }
+
+            .app-stack-item.pb-200 {
+                padding-bottom: 80px !important;
+            }
+
+            .app-cta-wrapper.pt-90 {
+                padding-top: 50px !important;
+            }
+
+            .app-cta-wrapper.pb-90 {
+                padding-bottom: 50px !important;
+            }
+        }
+
+        /* ── TABLET PORTRAIT: ≤ 768px ── */
+        @media (max-width: 768px) {
+            /* Remove left indent on hero content */
+            .app-hero-wrap.pl-55 {
+                padding-left: 0 !important;
+            }
+
+            /* Stack hero: text on top, mockup below */
+            .app-hero-area {
+                min-height: auto !important;
+                padding-bottom: 60vw !important; /* room for mockup below */
+            }
+
+            .app-hero-area .row.align-items-center {
+                min-height: auto !important;
+            }
+
+            .app-hero-area .col-lg-6:first-child,
+            .app-hero-area .col-md-8 {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            .hero-mockup-col {
+                top: auto !important;
+                bottom: 0 !important;
+                right: 0 !important;
+                width: 100% !important;
+                height: 60vw !important;
+                align-items: flex-end !important;
+            }
+
+            .hero-mockup-col img {
+                object-position: center bottom !important;
+            }
+
+            /* Center hero heading and buttons */
+            .app-hero-heading,
+            .app-hero-btn-text,
+            .app-hero-btn {
+                text-align: center;
+            }
+
+            .app-hero-btn-box {
+                justify-content: center;
+            }
+
+            .app-hero-btn .d-flex,
+            .app-hero-btn > div {
+                display: flex !important;
+                flex-wrap: wrap;
+                gap: 0.75rem;
+                justify-content: center;
+            }
+
+            /* Download section badges */
+            .store-buttons {
+                gap: 12px;
+            }
+
+            .store-button img {
+                height: 48px !important;
+            }
+
+            /* Stack CTA columns */
+            .app-cta-area .col-lg-6 {
+                width: 100% !important;
+                flex: 0 0 100% !important;
+                max-width: 100% !important;
+            }
+
+            /* CTA phone image */
+            .app-cta-thumb-1 {
+                max-width: 65vw !important;
+                margin: 0 auto;
+                display: block;
+            }
+
+            /* Stack store buttons in CTA */
+            .app-cta-store-box {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            /* Stack panel padding */
+            .app-stack-item.pt-200 {
+                padding-top: 60px !important;
+            }
+
+            .app-stack-item.pb-200 {
+                padding-bottom: 60px !important;
+            }
+
+            /* Partnerships cards full-width */
+            .app-feature-area .col-lg-4,
+            .app-feature-area .col-md-6 {
+                width: 100% !important;
+                flex: 0 0 100% !important;
+                max-width: 100% !important;
+            }
+        }
+
+        /* ── MOBILE: ≤ 480px ── */
+        @media (max-width: 480px) {
+            /* Download section title */
+            .download-section h2 {
+                font-size: clamp(1.4rem, 6vw, 2rem) !important;
+            }
+
+            .download-section .subtitle {
+                font-size: clamp(0.9rem, 4vw, 1.1rem) !important;
+            }
+
+            .download-section img {
+                max-width: 70vw !important;
+            }
+
+            /* Hero store buttons stack vertically */
+            .app-hero-btn .btn-store {
+                width: 100%;
+                justify-content: center;
+            }
+
+            /* Mockup on small phones — center and scale down */
+            .app-hero-round-shape {
+                display: flex !important;
+                justify-content: center !important;
+                margin-right: 0 !important;
+                height: 50vw !important;
+                min-height: 260px !important;
+            }
+
+            .app-hero-round-shape img {
+                height: 100% !important;
+                max-height: 320px !important;
+                width: auto !important;
+                max-width: 90vw !important;
+            }
+
+            /* Stack heading font scale */
+            .tp-section-title-phudu.fs-70 {
+                font-size: clamp(1.6rem, 7vw, 2.5rem) !important;
+            }
+
+            /* Stack section padding collapse */
+            .app-stack-item.pt-200 {
+                padding-top: 40px !important;
+            }
+
+            .app-stack-item.pb-200 {
+                padding-bottom: 40px !important;
+            }
+
+            /* App stack image */
+            .app-stack-thumb-box img {
+                max-width: 80vw !important;
+                margin: 0 auto;
+                display: block;
+            }
+
+            /* Feature heading margin */
+            .app-feature-heading.mt-145 {
+                margin-top: 40px !important;
+            }
+
+            .store-button img {
+                height: 40px !important;
+            }
+        }
+
+        /* ── VERY SMALL: ≤ 360px ── */
+        @media (max-width: 360px) {
+            .btn-store {
+                font-size: 0.85rem !important;
+                padding: 0.75rem 1rem !important;
+            }
+
+            .store-button img {
+                height: 36px !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="tp-magic-cursor" data-bg-color="#08041D">
+
+
+
+    <!-- back to top start -->
+    <!-- back to top start -->
+    <div class="back-to-top-wrapper">
+        <button id="back_to_top" type="button" class="back-to-top-btn">
+            <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 6L6 1L1 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </button>
+    </div>
+    <!-- back to top end -->
+    <!-- back to top end -->
+
+
+
+    <header>
+        <div class="tp-header-10-main header-transparent">
+            <!-- header area start -->
+            <div id="header-sticky" class="tp-header-10-area tp-header-blur sticky-white-bg tp-header-10-sticky">
+                <div class="container container-1430">
+                    <div class="tp-header-10-wrapper mt-30">
+                        <div class="row align-items-center">
+                            <div class="col-xl-1 col-lg-4 col-md-6 col-5">
+                                <div class="tp-header-10-logo">
+                                    <a href="index.html"><img data-width="40" src="assets/img/logo/logo-black.webp"
+                                            alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-xl-11 col-lg-8 col-md-6 col-7">
+                                <div
+                                    class="tp-header-10-box d-flex align-items-center justify-content-end justify-content-xl-between">
+                                    <div
+                                        class="tp-header-menu tp-header-10-menu tp-header-dropdown dropdown-white-bg d-none d-xl-block">
+                                        <nav class="tp-mobile-menu-active">
+                                            <ul>
+                                                <li><a href="index.html">Home</a></li>
+                                                <li><a href="#">Provider App</a></li>
+                                                <li><a href="#">Shelter Services</a></li>
+                                                <li><a href="#" class="disabled-link" style="opacity: 0.2;">FAM</a></li>
+                                                <li><a href="#">Contact</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    <div class="tp-header-10-right d-flex align-items-center">
+                                        <div class="tp-header-10-offcanvas ml-20">
+                                            <div class="tp-header-bar">
+                                                <button class="tp-offcanvas-open-btn">
+                                                    <i></i>
+                                                    <i></i>
+                                                    <i></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header area end -->
+        </div>
+    </header>
+
+    <div id="smooth-wrapper" data-bg-color="#F7F7FD" style="overflow-x:hidden;width:100%;">
+        <div id="smooth-content" style="overflow-x:hidden;width:100%;">
+
+            <main>
+
+                <div class="app-hero-area app-hero-ptb p-relative include-bg z-index-1"
+                    data-background="assets/img/home-10/hero/app-hero-bg.png" style="overflow:hidden;">
+                    <div class="container container-1430">
+                        <!-- Hero Section -->
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 col-md-8 col-12">
+                                <div class="app-hero-wrap pb-65">
+                                    <div class="app-hero-heading mb-40">
+                                        <h4 class="tp-section-title-phudu tp_fade_anim" data-delay=".5">Find and Create
+                                            Resources
+                                        </h4>
+                                    </div>
+                                    <div class="app-hero-btn-box d-flex align-item-center">
+                                        <div class="app-hero-btn-text tp_text_anim" style="padding-bottom: 50px;">
+                                            <p>A digital space where people and organizations share essential
+                                                information, connect resources, and bring real-world communities
+                                                together.</p>
+                                            <h3 class="mt-30"> Provider App Available now</h3>
+                                        </div>
+                                    </div>
+
+                                    <div class="app-hero-btn mr-35 tp_fade_anim" data-delay=".7" data-fade-from="top"
+                                        data-ease="bounce">
+                                        <div class="">
+                                            <a class="btn-store btn-glow p-relative "
+                                                href="https://apps.apple.com/us/app/totempole/id1608290097"
+                                                target="_blank" style="background-color: #645CFF;">
+                                                <span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="19"
+                                                        viewBox="0 0 16 19" fill="none">
+                                                        <path
+                                                            d="M13.3617 10.0506C13.3617 10.1354 13.2341 12.6375 16 13.9521C15.4894 15.5212 13.7021 18.9986 11.617 18.9986C10.4255 18.9986 9.74469 18.2353 8.38299 18.2353C6.97873 18.2353 6.21276 18.9986 5.14893 18.9986C3.10638 19.0834 1.14894 15.2667 0.595746 13.6977C0.170213 12.5102 0 11.3652 0 10.2626C0 6.48837 2.51064 4.66483 4.89362 4.62242C6.04256 4.62242 7.48938 5.42817 8.12768 5.42817C8.72341 5.42817 10.383 4.4528 11.9149 4.58001C13.4894 4.70724 14.6809 5.30094 15.4894 6.44596C14.0851 7.33651 13.3617 8.48152 13.3617 10.0506ZM10.9787 3.09576C10.1277 4.07113 9.1064 4.62242 8.00001 4.53762C7.91489 3.39261 8.34043 2.33242 9.1064 1.48427C9.78725 0.72093 10.9787 0.0848152 12 0C12 0.466483 12.1277 1.73871 10.9787 3.09576Z"
+                                                            fill="currentColor" />
+                                                    </svg>
+                                                </span>
+                                                App Store
+                                            </a>
+                                            <a class="btn-store btn-glow p-relative"
+                                                href="https://play.google.com/store/apps/details?id=com.swazei.totempole2&pli=1"
+                                                target="_blank" style="background-color: #645CFF;">
+                                                <span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="19"
+                                                        viewBox="0 0 16 19" fill="none">
+                                                        <path
+                                                            d="M13.3617 10.0506C13.3617 10.1354 13.2341 12.6375 16 13.9521C15.4894 15.5212 13.7021 18.9986 11.617 18.9986C10.4255 18.9986 9.74469 18.2353 8.38299 18.2353C6.97873 18.2353 6.21276 18.9986 5.14893 18.9986C3.10638 19.0834 1.14894 15.2667 0.595746 13.6977C0.170213 12.5102 0 11.3652 0 10.2626C0 6.48837 2.51064 4.66483 4.89362 4.62242C6.04256 4.62242 7.48938 5.42817 8.12768 5.42817C8.72341 5.42817 10.383 4.4528 11.9149 4.58001C13.4894 4.70724 14.6809 5.30094 15.4894 6.44596C14.0851 7.33651 13.3617 8.48152 13.3617 10.0506ZM10.9787 3.09576C10.1277 4.07113 9.1064 4.62242 8.00001 4.53762C7.91489 3.39261 8.34043 2.33242 9.1064 1.48427C9.78725 0.72093 10.9787 0.0848152 12 0C12 0.466483 12.1277 1.73871 10.9787 3.09576Z"
+                                                            fill="currentColor" />
+                                                    </svg>
+                                                </span>
+                                                Play Store
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hero-mockup-col">
+                                <img src="assets/img/home-10/hero/hero-hand-shape.png" alt="" role="presentation">
+                            </div>
+                        </div>
+
+                        <!-- Download Shelter Services Section -->
+                        <section class="download-section">
+                            <h2>Upcoming App Release...</h2>
+                            <p class="subtitle">Improving Community Health.</p>
+
+                            <img src="assets/img/logo/ss.png" alt="Shelter Services">
+
+                            <div class="store-buttons">
+                                <a href="" class="store-button disabled-link" style="opacity: 0.2;">
+                                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                                        alt="Download on App Store">
+                                </a>
+                                <a href="https://play.google.com/store/apps/details?id=com.swazei.totempole2&pli=1"
+                                    target="_blank" class="store-button">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                                        alt="Get it on Google Play" style="opacity: 0.2;">
+                                </a>
+                            </div>
+
+                            <p class="tagline">Shelter Services App</p>
+                        </section>
+
+                        <div class="app-hero-bottom-thumb-main z-index-1 tp_fade_anim" data-delay=".5">
+                            <img src="#" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- hero and download area end -->
+
+                <!-- feature area start -->
+
+
+                <!-- feature area start -->
+                <!-- <div class="app-feature-area app-feature-border-style"
+                    style="background: #f6fcff; padding-bottom: 70px; ">
+                    <div class="container container-1230">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="app-feature-heading text-center" style="background: #f6fcff;">
+
+                                    <h3 class="tp-section-title-phudu fs-70  tp_fade_anim" data-delay=".5">Unlock
+                                        All <br> Features in Our App</h3>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div> -->
+                <!-- feature area end -->
+
+
+
+
+                <!-- stack area start -->
+                <div class="app-stack-area app-stack-ptb app-stack-box stack-panel-pin-area" style="background-color: #fff;">
+                    <div class="app-stack-contain">
+                        <div class="app-stack-item stack-item app-stack-item-01 stack-panel-pin pt-200 pb-200 atropos"
+                            data-atropos data-bg-color="#">
+                            <div class="app-stack-warpper">
+                                <div class="container container-1230">
+                                    <div class="row">
+                                        <div class="col-lg-7">
+                                            <div class="app-stack-heading">
+                                                <!-- <span class="app-stack-subtitle">Non-Commercial Usage</span> -->
+                                                <!-- <h4 class="app-stack-number">01</h4> -->
+                                                <h3 class="app-stack-title">Mobile Community Infrastructure
+                                                </h3>
+                                                <div class="app-stack-content">
+
+
+
+
+
+
+                                                    <p>
+
+                                                        <span><svg xmlns="http://www.w3.org/2000/svg" width="10"
+                                                                height="9" viewBox="0 0 10 9" fill="none">
+                                                                <path
+                                                                    d="M1 5.6941C1 5.6941 2.6 6.60188 3.4 7.93242C3.4 7.93242 5.8 2.70967 9 0.96875"
+                                                                    stroke="#21212D" stroke-width="1.5"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                                </path>
+                                                            </svg></span> View free programs, services, public resource
+                                                        options <br>
+
+
+
+
+                                                        <span><svg xmlns="http://www.w3.org/2000/svg" width="10"
+                                                                height="9" viewBox="0 0 10 9" fill="none">
+                                                                <path
+                                                                    d="M1 5.6941C1 5.6941 2.6 6.60188 3.4 7.93242C3.4 7.93242 5.8 2.70967 9 0.96875"
+                                                                    stroke="#21212D" stroke-width="1.5"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                                </path>
+                                                            </svg></span> Creation of themed/unthemed digital lobbies
+                                                        “Totems” <br>
+                                                        <span><svg xmlns="http://www.w3.org/2000/svg" width="10"
+                                                                height="9" viewBox="0 0 10 9" fill="none">
+                                                                < <path
+                                                                    d="M1 5.6941C1 5.6941 2.6 6.60188 3.4 7.93242C3.4 7.93242 5.8 2.70967 9 0.96875"
+                                                                    stroke="#21212D" stroke-width="1.5"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                                    </path>
+                                                            </svg></span> View available facilities and their schedules
+                                                        <br>
+                                                        <span><svg xmlns="http://www.w3.org/2000/svg" width="10"
+                                                                height="9" viewBox="0 0 10 9" fill="none">
+                                                                <path
+                                                                    d="M1 5.6941C1 5.6941 2.6 6.60188 3.4 7.93242C3.4 7.93242 5.8 2.70967 9 0.96875"
+                                                                    stroke="#21212D" stroke-width="1.5"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                                </path>
+                                                            </svg></span> Share information, save money, use your
+                                                        options <br>
+                                                        <span><svg xmlns="http://www.w3.org/2000/svg" width="10"
+                                                                height="9" viewBox="0 0 10 9" fill="none">
+                                                                <path
+                                                                    d="M1 5.6941C1 5.6941 2.6 6.60188 3.4 7.93242C3.4 7.93242 5.8 2.70967 9 0.96875"
+                                                                    stroke="#21212D" stroke-width="1.5"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                                </path>
+                                                            </svg></span> Gain the full benefits of being a citizen <br>
+                                                      
+
+
+                                                    </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-5">
+                                            <atropos-component>
+                                                <div class="app-stack-thumb-box p-relative text-end">
+                                                    <div class="my-atropos">
+                                                        <div class="atropos">
+                                                            <div class="atropos-scale">
+                                                                <div class="atropos-rotate">
+                                                                    <div class="atropos-inner">
+                                                                     
+                                                                        
+                                                                        <img data-atropos-offset="-4" class="shape-2"
+                                                                            src="assets/img/home-10/stack/f.png"
+                                                                            alt="">
+                                                                       
+                                                                     
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </atropos-component>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+       
+
+                    </div>
+                </div>
+                <!-- stack area end -->
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="app-feature-area app-feature-border-style" style="background-color: #fff;">
+                    <div class="container container-1230">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="app-feature-heading text-center mb-55 mt-145">
+
+                                    <h3 class="tp-section-title-phudu fs-70 mb-20 tp_fade_anim" data-delay=".5"
+                                        style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                                        Partnerships </h3>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="app-feature-bg tp_fade_anim"
+                            style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                            <div class="row gx-10">
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="app-feature-item mb-30">
+                                        <div class="app-feature-item-icon">
+                                            <span><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                                                    viewBox="0 0 26 26" fill="none">
+                                                    <path
+                                                        d="M22.1594 3.76253L14.5434 0.370404C13.4257 -0.123468 11.7361 -0.123468 10.6184 0.370404L3.0024 3.76253C1.07889 4.6203 0.792969 5.79 0.792969 6.41384C0.792969 7.03768 1.07889 8.20738 3.0024 9.06516L10.6184 12.4573C11.1773 12.7042 11.8791 12.8342 12.5809 12.8342C13.2827 12.8342 13.9846 12.7042 14.5434 12.4573L22.1594 9.06516C24.0829 8.20738 24.3689 7.03768 24.3689 6.41384C24.3689 5.79 24.0959 4.6203 22.1594 3.76253Z"
+                                                        fill="currentColor"></path>
+                                                    <path opacity="0.4"
+                                                        d="M12.5807 19.5535C12.0869 19.5535 11.593 19.4495 11.1381 19.2546L2.37839 15.3556C1.03973 14.7577 0 13.1591 0 11.6905C0 11.1576 0.428889 10.7288 0.961751 10.7288C1.49461 10.7288 1.9235 11.1576 1.9235 11.6905C1.9235 12.3923 2.50835 13.3021 3.15818 13.588L11.9179 17.487C12.3338 17.669 12.8147 17.669 13.2306 17.487L21.9903 13.588C22.6401 13.3021 23.225 12.4053 23.225 11.6905C23.225 11.1576 23.6539 10.7288 24.1867 10.7288C24.7196 10.7288 25.1485 11.1576 25.1485 11.6905C25.1485 13.1461 24.1088 14.7577 22.7701 15.3556L14.0104 19.2546C13.5685 19.4495 13.0746 19.5535 12.5807 19.5535Z"
+                                                        fill="currentColor"></path>
+                                                    <path opacity="0.4"
+                                                        d="M12.5807 25.9998C12.0869 25.9998 11.593 25.8958 11.1381 25.7008L2.37839 21.8019C0.935758 21.165 0 19.7224 0 18.1368C0 17.6039 0.428889 17.175 0.961751 17.175C1.49461 17.175 1.9235 17.6039 1.9235 18.1368C1.9235 18.9556 2.40438 19.6964 3.15818 20.0343L11.9179 23.9333C12.3338 24.1153 12.8147 24.1153 13.2306 23.9333L21.9903 20.0343C22.7311 19.7094 23.225 18.9556 23.225 18.1368C23.225 17.6039 23.6539 17.175 24.1867 17.175C24.7196 17.175 25.1485 17.6039 25.1485 18.1368C25.1485 19.7224 24.2127 21.152 22.7701 21.8019L14.0104 25.7008C13.5685 25.8958 13.0746 25.9998 12.5807 25.9998Z"
+                                                        fill="currentColor"></path>
+                                                </svg></span>
+                                        </div>
+                                        <div class="app-feature-item-content">
+                                            <h4 class="app-feature-title">Public Services</h4>
+                                            <p>Distributing public services to communities
+Increasing access, decreasing vacancy.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="app-feature-item mb-30">
+                                        <div class="app-feature-item-icon">
+                                            <span><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                                                    viewBox="0 0 26 26" fill="none">
+                                                    <path
+                                                        d="M22.1594 3.76253L14.5434 0.370404C13.4257 -0.123468 11.7361 -0.123468 10.6184 0.370404L3.0024 3.76253C1.07889 4.6203 0.792969 5.79 0.792969 6.41384C0.792969 7.03768 1.07889 8.20738 3.0024 9.06516L10.6184 12.4573C11.1773 12.7042 11.8791 12.8342 12.5809 12.8342C13.2827 12.8342 13.9846 12.7042 14.5434 12.4573L22.1594 9.06516C24.0829 8.20738 24.3689 7.03768 24.3689 6.41384C24.3689 5.79 24.0959 4.6203 22.1594 3.76253Z"
+                                                        fill="currentColor"></path>
+                                                    <path opacity="0.4"
+                                                        d="M12.5807 19.5535C12.0869 19.5535 11.593 19.4495 11.1381 19.2546L2.37839 15.3556C1.03973 14.7577 0 13.1591 0 11.6905C0 11.1576 0.428889 10.7288 0.961751 10.7288C1.49461 10.7288 1.9235 11.1576 1.9235 11.6905C1.9235 12.3923 2.50835 13.3021 3.15818 13.588L11.9179 17.487C12.3338 17.669 12.8147 17.669 13.2306 17.487L21.9903 13.588C22.6401 13.3021 23.225 12.4053 23.225 11.6905C23.225 11.1576 23.6539 10.7288 24.1867 10.7288C24.7196 10.7288 25.1485 11.1576 25.1485 11.6905C25.1485 13.1461 24.1088 14.7577 22.7701 15.3556L14.0104 19.2546C13.5685 19.4495 13.0746 19.5535 12.5807 19.5535Z"
+                                                        fill="currentColor"></path>
+                                                    <path opacity="0.4"
+                                                        d="M12.5807 25.9998C12.0869 25.9998 11.593 25.8958 11.1381 25.7008L2.37839 21.8019C0.935758 21.165 0 19.7224 0 18.1368C0 17.6039 0.428889 17.175 0.961751 17.175C1.49461 17.175 1.9235 17.6039 1.9235 18.1368C1.9235 18.9556 2.40438 19.6964 3.15818 20.0343L11.9179 23.9333C12.3338 24.1153 12.8147 24.1153 13.2306 23.9333L21.9903 20.0343C22.7311 19.7094 23.225 18.9556 23.225 18.1368C23.225 17.6039 23.6539 17.175 24.1867 17.175C24.7196 17.175 25.1485 17.6039 25.1485 18.1368C25.1485 19.7224 24.2127 21.152 22.7701 21.8019L14.0104 25.7008C13.5685 25.8958 13.0746 25.9998 12.5807 25.9998Z"
+                                                        fill="currentColor"></path>
+                                                </svg></span>
+                                        </div>
+                                        <div class="app-feature-item-content">
+                                            <h4 class="app-feature-title">Local Commerce</h4>
+                                            <p>Local Non-franchises.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="app-feature-item mb-30">
+                                        <div class="app-feature-item-icon">
+                                            <span><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                                                    viewBox="0 0 26 26" fill="none">
+                                                    <path
+                                                        d="M22.1594 3.76253L14.5434 0.370404C13.4257 -0.123468 11.7361 -0.123468 10.6184 0.370404L3.0024 3.76253C1.07889 4.6203 0.792969 5.79 0.792969 6.41384C0.792969 7.03768 1.07889 8.20738 3.0024 9.06516L10.6184 12.4573C11.1773 12.7042 11.8791 12.8342 12.5809 12.8342C13.2827 12.8342 13.9846 12.7042 14.5434 12.4573L22.1594 9.06516C24.0829 8.20738 24.3689 7.03768 24.3689 6.41384C24.3689 5.79 24.0959 4.6203 22.1594 3.76253Z"
+                                                        fill="currentColor"></path>
+                                                    <path opacity="0.4"
+                                                        d="M12.5807 19.5535C12.0869 19.5535 11.593 19.4495 11.1381 19.2546L2.37839 15.3556C1.03973 14.7577 0 13.1591 0 11.6905C0 11.1576 0.428889 10.7288 0.961751 10.7288C1.49461 10.7288 1.9235 11.1576 1.9235 11.6905C1.9235 12.3923 2.50835 13.3021 3.15818 13.588L11.9179 17.487C12.3338 17.669 12.8147 17.669 13.2306 17.487L21.9903 13.588C22.6401 13.3021 23.225 12.4053 23.225 11.6905C23.225 11.1576 23.6539 10.7288 24.1867 10.7288C24.7196 10.7288 25.1485 11.1576 25.1485 11.6905C25.1485 13.1461 24.1088 14.7577 22.7701 15.3556L14.0104 19.2546C13.5685 19.4495 13.0746 19.5535 12.5807 19.5535Z"
+                                                        fill="currentColor"></path>
+                                                    <path opacity="0.4"
+                                                        d="M12.5807 25.9998C12.0869 25.9998 11.593 25.8958 11.1381 25.7008L2.37839 21.8019C0.935758 21.165 0 19.7224 0 18.1368C0 17.6039 0.428889 17.175 0.961751 17.175C1.49461 17.175 1.9235 17.6039 1.9235 18.1368C1.9235 18.9556 2.40438 19.6964 3.15818 20.0343L11.9179 23.9333C12.3338 24.1153 12.8147 24.1153 13.2306 23.9333L21.9903 20.0343C22.7311 19.7094 23.225 18.9556 23.225 18.1368C23.225 17.6039 23.6539 17.175 24.1867 17.175C24.7196 17.175 25.1485 17.6039 25.1485 18.1368C25.1485 19.7224 24.2127 21.152 22.7701 21.8019L14.0104 25.7008C13.5685 25.8958 13.0746 25.9998 12.5807 25.9998Z"
+                                                        fill="currentColor"></path>
+                                                </svg></span>
+                                        </div>
+                                        <div class="app-feature-item-content">
+                                            <h4 class="app-feature-title">Community Programs</h4>
+                                            <p>For local service providers to put their programs, facilities, and online portals in the pockets of their citizens.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- cta area start -->
+                <div class="app-cta-area z-index-1" style="background-color: #fff;">
+                    <div class="container container-1430">
+                        <div class="app-cta-wrap">
+                            <div class="row align-items-end">
+                                <div class="col-lg-6">
+                                    <div class="app-cta-wrapper pt-90 pb-90">
+                                        <div class="app-cta-heading mb-30">
+                                            <h3 class="tp-section-title-phudu fs-70 mb-20 tp_fade_anim" data-delay=".3">
+                                                Ready To <br> Download
+                                            </h3>
+
+                                        </div>
+                                        <div class="app-cta-store-box d-flex align-items-center tp_fade_anim"
+                                            data-delay=".3" data-fade-from="top" data-ease="bounce">
+                                            <div class="app-cta-store mr-15">
+                                                <div class="app-cta-store-icon">
+                                                    <span><img src="assets/img/home-10/cta/play-store.svg"
+                                                            alt=""></span>
+                                                </div>
+                                                <div class="app-cta-store-content">
+                                                    <a href="#"
+                                                        target="_blank">Download on the
+                                                        <span> Play Store </a></span> </a>
+                                                </div>
+                                            </div>
+                                            <div class="app-cta-store">
+                                                <div class="app-cta-store-icon">
+                                                    <span><img src="assets/img/home-10/cta/app-store.svg" alt=""></span>
+                                                </div>
+                                                <div class="app-cta-store-content">
+                                                    <a href="#"
+                                                        target="_blank">Download on the
+                                                        <span> App Store </a></span> </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="app-cta-thumb-wrap">
+                                        <div class="app-cta-thumb p-relative">
+                                            <div class="tp_fade_anim z-index-1" data-fade-from="left" data-delay=".3">
+                                                <img class="app-cta-thumb-1" src="assets/img/home-10/cta/cta-phn-1.png"
+                                                    alt="">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- cta area end -->
+
+            </main>
+
+
+            <footer>
+
+                <!-- footer area start -->
+                <div class="app-footer-area">
+                    <div class="container container-1230">
+                        <div class="row">
+
+                            <!-- <div class="col-xl-2 col-lg-2  col-md-3 mb-40">
+                                <div class="dgm-footer-widget app-footer-widget app-footer-col-2">
+                                    <h4 class="dgm-footer-widget-title">About product</h4>
+                                    <div class="dgm-footer-widget-menu">
+                                        <ul>
+                                            <li><a href="#">About</a></li>
+                                            <li><a href="#">Features</a></li>
+                                            <li><a href="#">How it works</a></li>
+                                            <li><a href="#">Reviews</a></li>
+                                            <li><a href="#">Subscribe</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <!-- <div class="col-xl-2 col-lg-2 col-md-3 mb-40">
+                                <div class="dgm-footer-widget app-footer-widget app-footer-col-3">
+                                    <h4 class="dgm-footer-widget-title">Need help?</h4>
+                                    <div class="app-footer-widget-info mb-20">
+                                        <div class="app-footer-widget-info-title">Call us directly?</div>
+                                        <a class="tp-line-black" href="tel:123456789">(+123) 567 8910</a>
+                                    </div>
+
+                                    <div class="app-footer-widget-info">
+                                        <div class="app-footer-widget-info-title">Need live support?</div>
+                                        <a class="tp-line-black" href="mailto:qV2Ct@example.com">support@domain.com</a>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <!-- <div class="col-xl-4 col-lg-4 col-md-6 mb-40">
+                                <div class="dgm-footer-widget app-footer-widget app-footer-col-4 z-index-1">
+                                    <h4 class="dgm-footer-widget-title">Keep in touch with us</h4>
+                                    <div class="dgm-footer-widget-paragraph color-style mb-25">
+                                        <p>Subscribe our newsletter to get the <br> latest news and updates!</p>
+                                    </div>
+                                    <div class="dgm-footer-widget-input p-relative">
+                                        <form action="#">
+                                            <input type="text" placeholder="Enter your email">
+                                            <div class="input-button">
+                                                <div class="animated-border-box radius-style-2">
+                                                    <a class="tp-btn-gradient sm p-relative" href="#">Send
+                                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M17.4918 0.523919C17.0417 0.0609703 16.3754 -0.110257 15.7541 0.0709359L1.2672 4.28277C0.611729 4.46578 0.147138 4.98852 0.0219872 5.65169C-0.105865 6.32754 0.340718 7.18639 0.924156 7.54515L5.45391 10.3283C5.9185 10.6146 6.51815 10.543 6.9026 10.1552L12.0896 4.93597C12.3507 4.66328 12.7829 4.66328 13.044 4.93597C13.3051 5.1978 13.3051 5.62451 13.044 5.8963L7.84799 11.1156C7.46263 11.5033 7.3906 12.1049 7.67422 12.5733L10.442 17.1484C10.7661 17.6911 11.3243 18 11.9366 18C12.0086 18 12.0896 18 12.1617 17.99C12.8639 17.9003 13.4222 17.4193 13.6293 16.7398L17.924 2.27243C18.1131 1.65638 17.942 0.985961 17.4918 0.523919Z"
+                                                                fill="currentcolor" />
+                                                            <path opacity="0.4"
+                                                                d="M6.7091 15.5302C6.97201 15.7957 6.97201 16.226 6.7091 16.4915L5.47919 17.7281C5.34774 17.8613 5.17487 17.9274 5.002 17.9274C4.82913 17.9274 4.65626 17.8613 4.5248 17.7281C4.261 17.4627 4.261 17.0332 4.5248 16.7678L5.75381 15.5302C6.01761 15.2657 6.44529 15.2657 6.7091 15.5302ZM6.00348 12.0984C6.26639 12.3639 6.26639 12.7942 6.00348 13.0597L4.77358 14.2963C4.64212 14.4295 4.46925 14.4956 4.29638 14.4956C4.12351 14.4956 3.95064 14.4295 3.81919 14.2963C3.55538 14.0309 3.55538 13.6014 3.81919 13.336L5.04819 12.0984C5.312 11.8339 5.73967 11.8339 6.00348 12.0984ZM2.61701 11.0182C2.87992 11.2836 2.87992 11.714 2.61701 11.9794L1.38711 13.216C1.25566 13.3492 1.08279 13.4154 0.909915 13.4154C0.737044 13.4154 0.564173 13.3492 0.432719 13.216C0.168911 12.9506 0.168911 12.5212 0.432719 12.2557L1.66172 11.0182C1.92553 10.7536 2.35321 10.7536 2.61701 11.0182Z"
+                                                                fill="currentcolor" />
+                                                        </svg></a>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- footer area end -->
+
+                <!-- copyright area start -->
+                <div class="tp-copyright-app-area tp-copyright-2-border app-copyright-border">
+                    <div class="container container-1430">
+                        <div class="row align-items-center">
+                            <div class="col-12">
+                                <div class="app-copyright-text text-center z-index-1">
+                                    <p>© 2026 Totempole Inc. All rights reserved
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- copyright area end -->
+
+            </footer>
+
+        </div>
+    </div>
+
+    <script>
+        // Enhanced button effects with ripple
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.btn-store, .btn-glow').forEach(button => {
+                button.addEventListener('click', function (e) {
+                    const ripple = document.createElement('span');
+                    const rect = this.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+                    const x = e.clientX - rect.left - size / 2;
+                    const y = e.clientY - rect.top - size / 2;
+
+                    ripple.style.cssText = `
+                position: absolute;
+                width: ${size}px;
+                height: ${size}px;
+                left: ${x}px;
+                top: ${y}px;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.3);
+                transform: scale(0);
+                animation: ripple-effect 0.6s linear;
+                pointer-events: none;
+            `;
+
+                    this.appendChild(ripple);
+                    setTimeout(() => ripple.remove(), 600);
+                });
+            });
+        });
+    </script>
+
+    <!-- JS here -->
+
+
+    <!-- JS here -->
+
+
+    <script src="assets/js/vendor/jquery.js"></script>
+    <script src="assets/js/bootstrap-bundle.js"></script>
+    <script src="assets/js/swiper-bundle.js"></script>
+    <script src="assets/js/plugin.js"></script>
+    <script src="assets/js/three.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/scroll-magic.js"></script>
+    <script src="assets/js/hover-effect.umd.js"></script>
+    <script src="assets/js/magnific-popup.js"></script>
+    <script src="assets/js/parallax-slider.js"></script>
+    <script src="assets/js/nice-select.js"></script>
+    <script src="assets/js/purecounter.js"></script>
+    <script src="assets/js/isotope-pkgd.js"></script>
+    <script src="assets/js/imagesloaded-pkgd.js"></script>
+    <script src="assets/js/ajax-form.js"></script>
+    <script src="assets/js/Observer.min.js"></script>
+    <script src="assets/js/splitting.min.js"></script>
+    <script src="assets/js/webgl.js"></script>
+    <script src="assets/js/parallax-scroll.js"></script>
+    <script src="assets/js/atropos.js"></script>
+    <script src="assets/js/slider-active.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/tp-cursor.js"></script>
+    <script src="assets/js/portfolio-slider-1.js"></script>
+    <script type="module" src="assets/js/distortion-img.js"></script>
+    <script type="module" src="assets/js/skew-slider/index.js"></script>
+    <script type="module" src="assets/js/img-revel/index.js"></script>
+
+
+    <!-- JS here -->
+
+    <!-- JS here -->
+
+</body>
+
+
+</html>
